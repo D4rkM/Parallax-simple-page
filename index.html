@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Canada</title>
+    <style media="screen">
+
+      body{
+        margin: 0px;
+        height: auto;
+        font-family: sans-serif;
+      }
+
+      a{
+        text-decoration: none;
+        color:black;
+      }
+
+      .form{
+        color: white;
+        border:2px solid white;
+        background-color: inherit;
+        border-radius:10px;
+      }
+
+      .input{
+        margin: 5px;
+        width:40%;
+        height:30px;
+      }
+
+      .button{
+        margin-top:15px;
+        width:20%;
+        height:30px;
+        cursor:pointer;
+      }
+
+      .text-red{
+        color:red;
+      }
+
+      .text-shadow{
+        text-shadow: 3px 2px  rgba(0, 0, 0, 0.19);
+      }
+
+      .list{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-around;
+        width: 400px;
+        height: 60px;
+        right: 40px;
+        float: left;
+        position: fixed;
+        /* list-style: none;
+        list-style-type: none;
+        display: inline; */
+      }
+
+      .logo{
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+      }
+
+      .logo img{
+        width:40px;
+        height:40px;
+      }
+
+      /* .nav ul {
+        /* left: 20%; */
+        /* right: 0px; */
+        /*background-color: blue;
+      } */
+
+      /* .list  li {
+        display: inline;
+      } */
+
+      #main{
+        padding:0px;
+      }
+
+      .intro{
+        width: 100%;
+        height: 100vh;
+        background-color: #f9f0f0;
+        background-image: url('./img/background.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+      }
+
+
+
+      .nav{
+        display: flex;
+        float: left;
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* border-bottom: solid 4px red; */
+        border-bottom: solid 4px #D80707;
+      }
+
+      .menu-button a{
+         color:#fff;
+         font-weight: bold;
+      }
+
+      #scene{
+        margin:0px 0px;
+        width: 100%;
+        height: 90vh;
+        /* background-color: #f9f9f9; */
+        /* opacity: 0.6; */
+        /* overflow:hidden; */
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* align-items: center; */
+        /* justify-content: space-around; */
+      }
+
+      .a{
+        width:100px;
+        height:100px;
+        /* background-color: pink; */
+        margin-left:15px;
+        margin-top:30px;
+        /* background-image: url('img/neve.png'); */
+        /* float: left; */
+        /* overflow: hidden; */
+        /* position: absolute; */
+      }
+
+      .content{
+        /* background-color:#f3f3f3; */
+        /* height: 100vh; */
+        /* width: 100vw; */
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .title{
+        margin: 40px 0px;
+      }
+
+      .history{
+        height: auto;
+        width: 800px;
+        font-size: 1.2rem;
+        text-align: justify;
+        margin-bottom: 50px;
+      }
+
+      .galery{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        height:300px;
+        width: 60%;
+      }
+
+      .galery_img{
+        display: flex;
+        flex-direction: column;
+        width:80%;
+        padding: 10px;
+      }
+
+      .galery img{
+        display: flex;
+        align-self: center;
+        background-color: grey;
+        width: 120px;
+        height: 120px;
+        border-radius:60px;
+      }
+
+      .quote{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(137,0,0,0.76);
+        height:200px;
+        width: 100%;
+        margin-bottom: 80px;
+      }
+
+      .hold{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgba(112, 112, 112, 0); */
+        background: rgba(0,0,0,0.1);
+      }
+
+      .px-item{
+        user-select: none;
+        float: left;
+        /* background-image: url("./img/surfer.png"); */
+        /* background-color: blue; */
+        margin-top: 25%;
+        margin-left: 25%;
+      }
+
+      .welcome{
+        color: white;
+        font-size: 1.5em;
+        z-index: 2;
+      }
+
+      .q{
+        color: rgba(255,255,255,0.7);
+        font-size: 1.8rem;
+        z-index: 2;
+        margin-top:20px;
+      }
+
+      .quote p{
+        color: rgba(255,255,255,0.2);
+        font-size: 1.0rem;
+      }
+
+      /* .item{
+        background-image: url("./img/surfer.png");
+      } */
+
+      .px-item img{
+        width:80%;
+        height: 80%;
+      }
+
+      .footer{
+        width: 100%;
+        height: 100vh;
+        background-image: url('img/pamela-saunders-384317-unsplash.jpg');
+        background-attachment: fixed;
+        background-size: 100%;
+        /* filter:blur(0.2rem); */
+        background-repeat: no-repeat;
+
+      }
+
+      .footer-content{
+        width:100%;
+        height:100%;
+        background-color: rgba(0,0,0,0.28);
+        display:flex;
+        flex-direction: column;
+      }
+
+      .contact{
+        width:50vw;
+        height:80%;
+        padding-top:8%;
+        /* border-right: #fff 1px solid; */
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+
+      }
+
+      .sitemap{
+        width:100%;
+        border-top:2px solid white;
+        height:10%;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content:space-around;
+      }
+
+      @media screen and (max-width:500px) /*and (min-height:200px)*/{
+
+        body{
+          font-size:1.0em;
+        }
+
+        .nav{
+          width:100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .list{
+          display: flex;
+          flex-direction: column;
+          align-items:center;
+          justify-content: space-around;
+          width: 400px;
+          height: 60px;
+          right: 40px;
+          float: none;
+          position: inherit;
+          /* list-style: none;
+          list-style-type: none;
+          display: inline; */
+        }
+
+        .hold:first-child{
+          display: none;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <img src="img/leaf.png" alt="canada leaf" title="canada leaf">
+      </div>
+      <div class="list">
+        <div class="menu-button"> <a href="#">Home</a> </div>
+        <div class="menu-button"> <a href="#history">History</a> </div>
+        <div class="menu-button"> <a href="#footer">Be a Member</a> </div>
+        <div class="menu-button"> <a href="#"></a> </div>
+      </div>
+    </div>
+    <div id="main">
+      <div class="intro">
+
+        <div class="hold">
+          <div id="scene">
+            <div class="px-item" data-depth="0.2">
+              <img src="img/backsnow.png" alt="">
+            </div>
+            <div class="px-item" data-depth="1.8">
+              <img src="img/surfer.png" width="30" height="30" alt="">
+            </div>
+            <div class="px-item" data-depth="0.6">
+              <img src="img/neve.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="hold">
+          <div class="welcome text-shadow">
+            <h1>Welcome to Canadá</h1>
+            <h4>Here you are able to know more about our snowboard culture.</h4>
+          </div>
+        </div>
+      </div>
+      <div id="history" class="content">
+        <div class="title">
+          <h1 style="color:#D80707;">THE SNOWBOARD CULTURE</h1>
+        </div>
+        <div class="history">
+          <p>
+            Snowboarding is the sport of riding a large flat ski downhill over snow.
+            Unlike downhill skiing, snowboarding does not require the use of poles and both feet are placed sideways on the same board. A relative newcomer to the family of winter sports, snowboarding began to gain popularity in the 1960s and rose in status from the latest "gimmick" to an accredited Olympic event in 1998, a relatively short period of time. Canadians have had great success over the years in international snowboarding at the Olympic Winter Games, Winter X Games and World Snowboarding Championships. Eight Canadian snowboarders have won Olympic medals — Ross Rebagliati, Dominique Maltais, Mike Robertson, Maëlle Ricker, Jasey-Jay Anderson, Mark McMorris, Max Parrot and Laurie Blouin. Rebagliati, Ricker and Anderson won Olympic gold, while Maltais and McMorris are multiple medallists.
+          </p>
+          <br>
+          <p>
+            The snowboard itself was originally derived from the idea of the surfboard. In North America the earliest marketed snowboarding device, the "Snurfer," came out in the height of the 1960s surfing culture. Subsequent modifications resulted in a lighter, more maneuverable board and by the 1980s, the snowboard had become widely popular. Like the culture from which it came, snowboarding was perceived as recreation for rebellious, daredevil youths who performed seemingly dangerous and reckless stunts with unrefined equipment. Snowboarders were met with hostility by skiers at local hills, who claimed that they tore up the slopes and cut crossways across the trails, ruining the runs for skiers. At first, few resorts welcomed snowboarders on their runs. However, as the profile of the sport rose alongside the ability of its participants, invitations to resorts increased.
+          </p>
+        </div>
+        <div class="quote">
+          <q cite="Marilyn vos Savant" class="q ">Being defeated is only a temporary condition; giving up is what makes it permanent</q>
+          <p>~Marilyn vos Savant</p>
+        </div>
+        <div class="history">
+          <p>
+            The Canadian Snowboard Federation was established in 1991 as the governing body for the competitive sport of snowboarding in Canada. The CSF sanctions, monitors and assists all competitive snowboarding programs held in Canada. The CSF is recognized as the official representative of snowboarding in Canada by national and international groups such as the Canadian Snowsports Association (CSA), the Fédération Internationale de Ski (FIS), the International Snowboard Federation (ISF) and the Canadian Olympic Association (COA). The Canadian Snowsports Association (CSA) represents Canada on the world governing body for skiing and snowboarding —the Fédération Internationale de Ski (FIS).
+          </p>
+        </div>
+        <div class="galery">
+          <div class="galery_img">
+            <img src="img/290e4cebd3243c73b56e1ff8a19c2bc2.jpg" alt="">
+            <p>You can snowboard on huge mountains here.</p>
+          </div>
+          <div class="galery_img">
+            <img src="img/federico-enni-462459-unsplash.jpg" alt="">
+            <p>Or also train and join the competitions to be a professional.</p>
+          </div>
+          <div class="galery_img">
+            <img src="img/vansh-juneja-1095259-unsplash.jpg" alt="">
+            <p>A little tired? You can relax and see the beauty of the nature.</p>
+          </div>
+          <div class="galery_img">
+            <img src="img/kea-mowat-578504-unsplash.jpg" alt="">
+            <p>Lastly you can get up again and start over and over!</p>
+          </div>
+
+        </div>
+      </div>
+      <div id="footer" class="footer">
+        <div class="footer-content">
+            <div class="contact welcome text-shadow">
+              <h2>Want to snowboard with us?</h2>
+              <h4>You can be a part of our members! :)</h4>
+              <input id="name" class="form input" type="text" placeholder="Your name..." >
+              <input id="email" class="form input" type="email" placeholder="Your email..." >
+              <input id="btn-form" class="form button" type="submit" value="Join Us">
+            </div>
+            <div class="sitemap welcome">
+                <div>
+                  Follow us
+                </div>
+                <div>
+                  Canada Snowboard	&copy;
+                </div>
+                <div>
+                  Made with <3 by D4rkM
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script>
+
+    window.onload = function() {
+      var browserName = navigator.appName;
+      console.log(browserName);
+      if(browserName == "Microsoft Internet Explorer"){
+      	alert("DEIXA DE SER MÃO DE VACA E INSTALA UM NAVEGADOR DECENTE!!");
+	//$("body").html("");
+	document.body.innerHTML = "";
+	document.body.innerHTML = 'Links para navegadores DECENTES:'+
+					'<br>'+
+					'GOOGLE CHROME - WINDOWS: '+
+					'<a href="itens/chrome.exe">Clique aqui</a>'+
+					'<br>'+
+					'FIREFOX - WINDOWS: '+
+					'<a href="itens/firefox.exe">Clique aqui</a>';
+      }else{
+
+      	var scene = document.getElementById("scene");
+      	var parallaxInstance = new Parallax(scene);
+      }
+      // parallaxInstance.friction();
+      // enable();
+    };
+    //hide menu color
+
+    $(document).on("click", "#btn-form", (e) => {
+
+      e.preventDefault();
+
+      var name = $("#name").val();
+      var email = $("#email").val();
+
+      if(name != "" && email != ""){
+
+        alert('Thanks for subscribe! Your data has been sent successfully!!');
+        $("#name").val("");
+        $("#email").val("");
+      }else{
+        alert("Fill all the blanks!");
+      }
+
+    });
+
+    </script>
+  </body>
+</html>
